@@ -1,0 +1,25 @@
+1. **XLM-R (Multilingual)**  
+   - **Training Accuracy**: 61.17%  
+   - **Validation Accuracy**: 57.12%  
+   The XLM-R model showed moderate performance, with a validation accuracy of 57.12%. It is suitable for multilingual tasks but may require further tuning for higher accuracy.
+
+2. **TinyBERT**  
+   - **Validation Accuracy**: 74.90%  
+   TinyBERT performed significantly better, achieving a validation accuracy of 74.90%. This model is more efficient and suitable for tasks requiring a smaller model size with competitive accuracy.
+
+3. **SpanBERT Large**  
+   - **Epoch 1**: Training Loss: 0.8832, Validation Loss: 0.9412, Accuracy: 57.12%  
+   - **Epoch 2**: Training Loss: 0.8276, Validation Loss: 0.9477, Accuracy: 57.12%  
+   SpanBERT showed stagnation in both validation loss and accuracy, with a final validation accuracy of 57.12%. More epochs or fine-tuning adjustments may be required to improve results.
+
+4. **SpanBERT Base**  
+   - **Epoch 1**: Training Loss: 0.7248, Validation Loss: 0.6804, Accuracy: 69.87%  
+   - **Epoch 2**: Training Loss: 0.5574, Validation Loss: 0.6154, Accuracy: 73.72%  
+   - **Epoch 3**: Training Loss: 0.4644, Validation Loss: 0.6210, Accuracy: 74.21%  
+   SpanBERT Base showed progressive improvements in accuracy over the epochs, reaching a final validation accuracy of 74.21%. This is a strong contender, with steady gains in performance throughout the training.
+
+5. **DistilBERT**  
+   - **Training Accuracy**: 88.21%  
+   - **Validation Accuracy**: 76.88%  
+   DistilBERT achieved the best performance among the models, with a validation accuracy of 76.88%, indicating strong results for the task at hand. It is a smaller, faster version of BERT with comparable performance.
+
