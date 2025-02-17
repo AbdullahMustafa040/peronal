@@ -1,15 +1,23 @@
-import openai
-import numpy as np
+from openai import OpenAI
 
 class OpenAIGPTEmbedding:
-    def __init__(self, api_key, model='text-embedding-ada-002'):
-        openai.api_key = api_key
+    def __init__(self, model="text-embedding-ada-002", api_key=None):
         self.model = model
+        print(api_key)
+        self.client = OpenAI(api_key=api_key)
 
     def get_embedding(self, sentence):
-        response = openai.Embedding.create(
+        """
+        Gets the embedding for a given sentence.
+
+        Args:
+            sentence: The sentence to get the embedding for.
+
+        Returns:
+            The embedding for the sentence.
+        """
+        response = self.client.embeddings.create(
             input=sentence,
             model=self.model
         )
-        embedding = response['data'][0]['embedding']
-        return np.array(embedding)
+        return response.data[0].embedding
